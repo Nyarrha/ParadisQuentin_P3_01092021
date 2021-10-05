@@ -1,0 +1,35 @@
+@font-face{
+    font-family: 'Shrikhand';
+    src: url('./font/Shrikhand-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('./font/Roboto-Black.ttf');
+    src: url('./font/Roboto-Bold.ttf');
+    src: url('./font/Roboto-Medium.ttf');
+    src: url('./font/Roboto-Regular.ttf');
+    src: url('./font/Roboto-Thin.ttf');
+    font-style: normal;
+}
+
+@media screen and (max-width: 500px){
+    body{
+        margin: 0;
+        max-width: 100%;
+    }
+    .logo{
+        font-family: 'Shrikhand';
+        &__header{
+            color: #111;
+            font-size: 32px;
+        }
+        &__footer{
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    *{
+        font-family: 'Roboto';
+    }
+}
