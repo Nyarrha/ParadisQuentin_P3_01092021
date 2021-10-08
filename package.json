@@ -4,8 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+    "sass": "sass --watch ./sass/style.scss:style.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyarrha/ParadisQuentin_P3_01092021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nyarrha/ParadisQuentin_P3_01092021/issues"
+  },
+  "homepage": "https://github.com/Nyarrha/ParadisQuentin_P3_01092021#readme",
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
 }
