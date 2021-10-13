@@ -14,11 +14,11 @@
 @media screen and (max-width: 500px) {
   * {
     font-family: "Roboto";
+    max-width: 100%;
   }
 
   body {
     margin: 0;
-    max-width: 100%;
   }
 
   .logo {
@@ -27,15 +27,223 @@
   .logo__header {
     color: #111;
     font-size: 32px;
+    text-align: center;
   }
   .logo__footer {
     color: #fff;
     font-size: 20px;
+    padding-left: 30px;
   }
 
-  .footer {
-    background-color: #111;
-    color: blue;
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2F2F2;
+  }
+  .intro__location {
+    font-weight: 1000;
+    font-size: 18px;
+    background-color: #bfbfbf;
+  }
+  .intro__location i {
+    margin-right: 20px;
+  }
+  .intro__heading {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .intro__description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .intro__btn {
+    margin: 20px 0 60px 0;
+    background: linear-gradient(#ff79da, #9356dc);
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 30px;
+  }
+
+  .functioning {
+    display: flex;
+    flex-direction: column;
+  }
+  .functioning h1 {
+    margin-left: 18px;
+    font-weight: bold;
+  }
+  .functioning__button {
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+    align-items: center;
+    margin: auto;
+    width: 85%;
+    border-radius: 28px;
+    border: none;
+    height: 75px;
+    font-size: 18px;
+    margin-bottom: 18px;
+    box-shadow: 3px 3px 3px 3px #e5e5e5;
+  }
+  .functioning__button--number {
+    background: #9356dc;
+    border-radius: 100%;
+    padding: 6px 12px;
+    border: none;
+    color: #fff;
+  }
+  .functioning__button--description {
+    margin: auto;
+  }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    margin-bottom: 0;
+  }
+  .restaurants h1 {
+    margin-left: 18px;
+  }
+
+  .card {
+    margin: auto;
+    width: 90%;
+    height: 275px;
+    background: #fff;
+    border-radius: 24px;
+    margin-bottom: 32px;
+  }
+  .card img {
+    border-radius: 24px 24px 0 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card p {
+    margin: 4px 0 4px 18px;
+    font-size: 20px;
+  }
+  .card a {
+    text-decoration: none;
+  }
+  .card__text--bold {
+    font-weight: 800;
+  }
+
+  .menus {
+    background-color: #F2F2F2;
+    border-radius: 40px 40px 0 0;
+    z-index: 1;
+    position: relative;
+    margin-top: -35px;
+    margin-bottom: 0;
+  }
+  .menus__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .menus__header i {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    font-size: 26px;
+  }
+  .menus h1 {
+    display: flex;
+    font-family: "Shrikhand";
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    justify-content: space-around;
+    padding-top: 12px;
+    margin-top: 0;
+  }
+  .menus h2 {
+    font-weight: 400;
+    margin-left: 8px;
+    text-transform: capitalize;
+  }
+  .menus__card {
+    margin: auto;
+    width: 90%;
+    height: 60px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 3px 3px 3px 3px #e5e5e5;
+    padding: 3px 12px;
+    margin-bottom: 12px;
+  }
+  .menus__card p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .menus__card--bold {
+    font-weight: bold;
+  }
+  .menus__card--price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .desserts {
+    margin-bottom: 32px;
+  }
+
+  .command {
+    background-color: #F2F2F2;
+    display: flex;
+    width: 100%;
+    padding: 20px 0 45px 0;
+  }
+  .command button {
+    margin: 0 auto 20px auto;
+    background: linear-gradient(#ff79da, #9356dc);
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    padding: 12px 56px;
+    border: none;
+    border-radius: 30px;
+  }
+
+  .image__menus img {
+    object-fit: cover;
+    width: 100%;
+    height: 225px;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 12px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  footer ul i {
+    margin-right: 8px;
+  }
+  footer ul li {
+    padding-bottom: 8px;
+  }
+  footer ul a {
+    text-decoration: none;
+    color: #fff;
   }
 }
 
