@@ -5,72 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="Shrikhand-Regular.ttf"> -->
+    <!-- Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/34e00bac8c.js" crossorigin="anonymous"></script>
     <title>Ohmyfood</title>
 </head>
 <body>
-    <header>
-        <span><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></span><h1 class="logo logo__header">Ohmyfood</h1>
+    <header class="menus__header">
+        <span class="return"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></span><h1 class="logo logo__header">Ohmyfood</h1>
     </header>
-
-    <!-- <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" />
-     -->
-     <div class="menus">
-        <h1>A la française</h1> <i class="fa-regular fa-heart"></i>
+    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" />
+    <section class="menus">
+        <h1>À la française <i class="fa-regular fa-heart"></i></h1>
+        <div class="entries">
         <h2>Entrées</h2>
         <div class="menus__card">
             <p class="menus__card--bold">Tartare de poulpe acidulé</p>
+            <div class="menus__card--price">
             <p>Aux zestes d'orange</p>
             <p class="menus__card--bold">25€</p>
+            </div>
         </div>
         <div class="menus__card">
             <p class="menus__card--bold">Velouté de légumes d'antan</p>
+            <div class="menus__card--price">
             <p>Carotte, panais, topinambour</p>
             <p class="menus__card--bold">35€</p>
+            </div>
         </div>
         <div class="menus__card">
                 <p class="menus__card--bold">Soupe à l'oignon</p>
+                <div class="menus__card--price">
                 <p>Revisitée</p>
                 <p class="menus__card--bold">20€</p>
+                </div>
         </div>
+    </div>
+    <div class="plats">
         <h2>Plats</h2>
         <div class="menus__card">
             <p class="menus__card--bold">Coquilles Saint-Jacques</p>
+            <div class="menus__card--price">
             <p>Accompagnées d'une purée de panais</p>
             <p class="menus__card--bold">40€</p>
+            </div>
         </div>
         <div class="menus__card">
             <p class="menus__card--bold">Magret de canard</p>
+            <div class="menus__card--price">
             <p>Et parmentier de pommes de terre</p>
             <p class="menus__card--bold">35€</p>
+            </div>
         </div>
         <div class="menus__card">
             <p class="menus__card--bold">Pigeonneau d'Ille-et-Vilaine</p>
+            <div class="menus__card--price">
             <p>Sur son lit de gnocchis aux légumes</p>
             <p class="menus__card--bold">44€</p>
+            </div>
         </div>
+    </div>
+    <div class="desserts">
         <h2>Desserts</h2>
         <div class="menus__card">
             <p class="menus__card--bold">Pétales de violettes glacés</p>
+            <div class="menus__card--price">
             <p>Et purée de noisettes</p>
             <p class="menus__card--bold">18€</p>
+            </div>
         </div>
         <div class="menus__card">
             <p class="menus__card--bold">Fondant au chocolat</p>
+            <div class="menus__card--price">
             <p>Revisité</p>
             <p class="menus__card--bold">22€</p>
+            </div>
         </div>
         <div class="menus__card">
             <p class="menus__card--bold">Millefeuille croustillant</p>
+            <div class="menus__card--price">
             <p>Myrtilles et pâte d'amande</p>
             <p class="menus__card--bold">23€</p>
+            </div>
         </div>
-        <button>Commander</button>
-     
-     <footer style="background-color: #111; color: #fff;">
-        <h1 class="logo logo__footer">Ohmyfood</h1>
+    </div>
+        <div class="command">
+            <button>Commander</button>
+        </div>
+    </section>
+    <footer>
+        <p class="logo logo__footer">Ohmyfood</p>
         <ul>
             <li><a href="#"><i class="fa-solid fa-utensils"></i><span>Proposer un restaurant</span></a></li>
             <li><a href="#"><i class="fa-solid fa-handshake-angle"></i><span>Devenir partenaire</span></a></li>
@@ -79,3 +104,4 @@
         </ul>
     </footer>
 </body>
+</html>
