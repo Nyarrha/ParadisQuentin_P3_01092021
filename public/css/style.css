@@ -1,16 +1,3 @@
-@font-face {
-  font-family: "Shrikhand";
-  src: url("./font/Shrikhand-Regular.ttf");
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("./font/Roboto-Black.ttf");
-  src: url("./font/Roboto-Bold.ttf");
-  src: url("./font/Roboto-Medium.ttf");
-  src: url("./font/Roboto-Regular.ttf");
-  src: url("./font/Roboto-Thin.ttf");
-  font-style: normal;
-}
 @media screen and (max-width: 500px) {
   * {
     font-family: "Roboto";
@@ -44,7 +31,15 @@
   .intro__location {
     font-weight: 1000;
     font-size: 18px;
-    background-color: #bfbfbf;
+    background-color: #e5e5e5;
+    padding-top: 18px;
+    margin-top: 0px;
+    padding-bottom: 18px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    width: 100%;
+    text-align: center;
+    box-shadow: inset 0 2px 3px 0 #bfbfbf;
   }
   .intro__location i {
     margin-right: 20px;
@@ -91,12 +86,23 @@
     margin-bottom: 18px;
     box-shadow: 3px 3px 3px 3px #e5e5e5;
   }
+  .functioning__button:hover {
+    background-color: #f2eafb;
+  }
+  .functioning__button:hover i {
+    color: #9356dc;
+  }
+  .functioning__button i {
+    margin-left: 36px;
+  }
   .functioning__button--number {
     background: #9356dc;
     border-radius: 100%;
     padding: 6px 12px;
     border: none;
     color: #fff;
+    position: absolute;
+    left: 3%;
   }
   .functioning__button--description {
     margin: auto;
@@ -132,6 +138,24 @@
   }
   .card a {
     text-decoration: none;
+  }
+  .card__text {
+    display: flex;
+  }
+  .card__text i {
+    position: absolute;
+    left: 80%;
+    margin-top: -18px;
+    font-size: 28px;
+  }
+  .card__text--hovering {
+    position: absolute;
+    left: 65%;
+    color: #2c9c81;
+    background-color: #99e2d0;
+    border-radius: 2px;
+    padding: 8px;
+    margin-top: 24px;
   }
   .card__text--bold {
     font-weight: 800;
@@ -171,6 +195,13 @@
     font-weight: 400;
     margin-left: 8px;
     text-transform: capitalize;
+  }
+  .menus h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #99e2d0;
   }
   .menus__card {
     margin: auto;
