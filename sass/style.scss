@@ -138,13 +138,6 @@
         }
         &__text{
             display: flex;
-            // Alignement coeur
-            & i{
-                position: absolute;
-                left: 80%;
-                margin-top: -18px;
-                font-size: 28px;
-            }
             // Effet "nouveau" sur image
             &--hovering{
                 position: absolute;
@@ -158,6 +151,33 @@
         }
         &__text--bold{
             font-weight: 800;
+        }
+    }
+
+    // Animation coeur
+    .heart {
+        font-size: 32px;
+        position: absolute;
+        left: 75%;
+        margin-top: -18px;
+        color: black;
+        &:hover{
+            opacity: 0;
+            transition: 0.4s ease-out;
+        }
+    }
+
+    .heart-transition{
+        font-size: 32px;
+        position: absolute;
+        left: 75%;
+        margin-top: -18px;
+        opacity: 0;
+        color: lineargradient($purple, $pink);
+        &:hover{
+            opacity: 1;
+            transition: 0.4s ease-out;
+            transform-origin: top;
         }
     }
 
