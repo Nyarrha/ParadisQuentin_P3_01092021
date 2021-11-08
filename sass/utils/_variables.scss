@@ -4,73 +4,85 @@ $mint: #99e2d0;
 $grey: #F2F2F2;
 $shadow: darken($grey, 5%);
 
-.loading-page p{
-    font-family: 'Shrikhand';
-    font-size: 46px;
-}
-
-.loading-page i{
-    margin: 0 16px;
-    font-size: 46px;
-}
-
 .loading-page{
     display: flex;
-    align-items: center;
-    z-index: 10;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     justify-content: center;
-
+    align-items: center;
+    animation: disappear 2.5s ease-out;
+    animation-fill-mode: forwards;
+    & p{
+        font-family: 'Shrikhand';
+        animation: growing 2.5s ease-out;
+    }
+    .spinner1{
+        color: $purple;
+        font-size: 44px;
+        margin-right: 10px;
+        animation: spinning 1.1s cubic-bezier(.96,.09,.17,.95) infinite;
+    }
+    .spinner2{
+        color: $pink;
+        font-size: 44px;
+        margin-left: 10px;
+        animation: spinning 1.6s cubic-bezier(.96,.09,.17,.95) infinite; 
+    }
+}
+// display
+@keyframes disappear{
+    0%{
+        z-index: 4;
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -10;
+        // display: none;
+    }
 }
 
-.loading-spinning {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .loading-spinning div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid $pink;
-    border-radius: 50%;
-    animation: loading-spinning 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: $purple transparent transparent transparent;
-  }
-  .loading-spinning div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .loading-spinning div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .loading-spinning div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes loading-spinning {
-    0% {
-      transform: rotate(0deg);
+// Growing animation
+@keyframes growing{
+    0%{
+        font-size: 2.5em;
     }
     20%{
-        transform: scale(1.15);
+        font-size: 3.5em;
     }
     40%{
-        transform: scale(1);
+        font-size: 2.5em;
     }
     60%{
-        transform: scale(1.15);
+        font-size: 3.5em;
     }
     80%{
-        transform: scale(1);
+        font-size: 2.5em;
     }
-    100% {
-      transform: rotate(360deg);
+    90%{
+        z-index: 1;
+        font-size: 3.5em;
     }
-  }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+// Spinning animation
+@keyframes spinning{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(2turn);
+    }
+}
 
 //  Apparition cartes animation
 
@@ -95,7 +107,7 @@ $shadow: darken($grey, 5%);
 // Validation carte
 
 .validate{
-    width:0;
-    min-width:0;
-    overflow:hidden;
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
 }

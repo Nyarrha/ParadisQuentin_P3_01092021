@@ -1,8 +1,8 @@
 @import './variables.scss';
 
-@mixin centering-card($height: 250px, $radius: 24px){
+@mixin centering-card($height: 250px, $radius: 24px, $width:90%){
     margin: auto;
-    width: 90%;
+    width: $width;
     height: $height;
     background: #fff;
     border-radius: $radius;
