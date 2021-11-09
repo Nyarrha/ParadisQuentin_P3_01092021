@@ -1,5 +1,6 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
+@import "./components/keyframes.scss";
 
 // @media screen and (max-width: 500px){
     *{
@@ -187,8 +188,12 @@
         position: absolute;
         left: 75%;
         @media screen and (min-width: 1000px){
-            position: relative;
-            left: 60%;
+            &--left{
+                left: 35%;
+            }
+            &--right{
+                left: 85%;
+            }
         }
         margin-top: -18px;
         color: black;
@@ -203,8 +208,12 @@
         position: absolute;
         left: 75%;
         @media screen and (min-width: 1000px){
-            position: relative;
-            left: 55%;
+            &--left{
+                left: 35%;
+            }
+            &--right{
+                left: 85%;
+            }
         }
         margin-top: -18px;
         opacity: 0;
@@ -238,14 +247,6 @@
          position: relative;
          margin-top: -35px;
          margin-bottom: 0;
-        //  container
-        &__container{
-            @media screen and (min-width: 1000px){
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
         &__header{   
             display: flex;
             justify-content: center;
@@ -294,6 +295,7 @@
             @media screen and (min-width: 1000px){
             flex-direction: row;
             justify-content: space-around;
+            margin: auto;
             }
         }
         // Alignement cartes + textes
@@ -304,30 +306,39 @@
             }
             @include centering-card(60px, 18px, 95%);
             box-shadow: 3px 3px 3px 3px $shadow;
-            padding: 3px 12px;
+            padding: 0 0 0 12px;
             margin-top: 10px;
             & p{
-                margin-top: 3px;
-                margin-bottom: 3px;
+                margin-top: 0;
+                margin-bottom: 0;
             }
-            &--bold{
+            &--title{
                 font-weight: bold;
+                margin-top: 9px;
             }
-            &--price{
+            &--infos{
                 display: flex;
                 justify-content: space-between;
+                margin-right: 18px;
+                margin-top: 3px;
             }
         }
     }
+.plat{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
     @media screen and (min-width: 1000px){
         .entries{
-            width: 30%;
+            width: 35%;
         }
         .plats{
-            width: 30%;
+            width: 35%;
         }
         .desserts{
-            width: 30%;
+            width: 35%;
             margin-bottom: 32px;
         }
     }

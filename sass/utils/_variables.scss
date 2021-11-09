@@ -8,6 +8,9 @@ $shadow: darken($grey, 5%);
     display: flex;
     width: 100vw;
     height: 100vh;
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
     justify-content: center;
     align-items: center;
     animation: disappear 2.5s ease-out;
@@ -29,80 +32,40 @@ $shadow: darken($grey, 5%);
         animation: spinning 1.6s cubic-bezier(.96,.09,.17,.95) infinite; 
     }
 }
-// display
-@keyframes disappear{
-    0%{
-        z-index: 4;
-        opacity: 1;
-    }
-    99%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        z-index: -10;
-        // display: none;
-    }
-}
 
-// Growing animation
-@keyframes growing{
-    0%{
-        font-size: 2.5em;
-    }
-    20%{
-        font-size: 3.5em;
-    }
-    40%{
-        font-size: 2.5em;
-    }
-    60%{
-        font-size: 3.5em;
-    }
-    80%{
-        font-size: 2.5em;
-    }
-    90%{
-        z-index: 1;
-        font-size: 3.5em;
-    }
-    99%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-// Spinning animation
-@keyframes spinning{
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(2turn);
-    }
-}
 
 //  Apparition cartes animation
 
 .menus__card{
+    display: flex;
+    align-self: center;
     margin-top: 10px;
     animation-name: menu-loading;
     animation-duration: 3s;
-    transition-delay: margin-top 1s;
-}
-
-@keyframes menu-loading{
-    0%{
-        margin-top: 20px;
-        opacity: 0;
+    &--title{
+        margin-top: 12px;
     }
-    100%{
-        margin-top: 10px;
-        opacity: 1;
+    & p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
-}
+    &:hover{
+        & p{
+            max-width: 200px;
+            @media screen and (max-width: 500px){
+                max-width: 200px;
+            }
+        }
+        & .validate{
+            width: 45px;
+            background-color: $mint;
+            & i{
+                animation: spin-check 0.5s linear;
+                }
+            }
+        }
+    }
 
 // Validation carte
 
@@ -110,4 +73,14 @@ $shadow: darken($grey, 5%);
     width: 0;
     min-width: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: width 0.5s ease-out;
+    & i{
+        font-size: 18px;
+    }
 }

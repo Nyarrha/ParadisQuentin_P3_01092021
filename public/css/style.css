@@ -2,6 +2,9 @@
   display: flex;
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
   justify-content: center;
   align-items: center;
   animation: disappear 2.5s ease-out;
@@ -24,81 +27,60 @@
   animation: spinning 1.6s cubic-bezier(0.96, 0.09, 0.17, 0.95) infinite;
 }
 
-@keyframes disappear {
-  0% {
-    z-index: 4;
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-@keyframes growing {
-  0% {
-    font-size: 2.5em;
-  }
-  20% {
-    font-size: 3.5em;
-  }
-  40% {
-    font-size: 2.5em;
-  }
-  60% {
-    font-size: 3.5em;
-  }
-  80% {
-    font-size: 2.5em;
-  }
-  90% {
-    z-index: 1;
-    font-size: 3.5em;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes spinning {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(2turn);
-  }
-}
 .menus__card {
+  display: flex;
+  align-self: center;
   margin-top: 10px;
   animation-name: menu-loading;
   animation-duration: 3s;
-  transition-delay: margin-top 1s;
+}
+.menus__card--title {
+  margin-top: 12px;
+}
+.menus__card p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menus__card:hover p {
+  max-width: 200px;
+}
+@media screen and (max-width: 500px) {
+  .menus__card:hover p {
+    max-width: 200px;
+  }
+}
+.menus__card:hover .validate {
+  width: 45px;
+  background-color: #99e2d0;
+}
+.menus__card:hover .validate i {
+  animation: spin-check 0.5s linear;
 }
 
-@keyframes menu-loading {
-  0% {
-    margin-top: 20px;
-    opacity: 0;
-  }
-  100% {
-    margin-top: 10px;
-    opacity: 1;
-  }
-}
 .validate {
   width: 0;
   min-width: 0;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: width 0.5s ease-out;
+}
+.validate i {
+  font-size: 18px;
 }
 
 .loading-page {
   display: flex;
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
   justify-content: center;
   align-items: center;
   animation: disappear 2.5s ease-out;
@@ -121,12 +103,60 @@
   animation: spinning 1.6s cubic-bezier(0.96, 0.09, 0.17, 0.95) infinite;
 }
 
+.menus__card {
+  display: flex;
+  align-self: center;
+  margin-top: 10px;
+  animation-name: menu-loading;
+  animation-duration: 3s;
+}
+.menus__card--title {
+  margin-top: 12px;
+}
+.menus__card p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menus__card:hover p {
+  max-width: 200px;
+}
+@media screen and (max-width: 500px) {
+  .menus__card:hover p {
+    max-width: 200px;
+  }
+}
+.menus__card:hover .validate {
+  width: 45px;
+  background-color: #99e2d0;
+}
+.menus__card:hover .validate i {
+  animation: spin-check 0.5s linear;
+}
+
+.validate {
+  width: 0;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: width 0.5s ease-out;
+}
+.validate i {
+  font-size: 18px;
+}
+
 @keyframes disappear {
   0% {
-    z-index: 4;
+    z-index: 10;
     opacity: 1;
   }
   99% {
+    z-index: 10;
     opacity: 1;
   }
   100% {
@@ -169,13 +199,14 @@
     transform: rotate(2turn);
   }
 }
-.menus__card {
-  margin-top: 10px;
-  animation-name: menu-loading;
-  animation-duration: 3s;
-  transition-delay: margin-top 1s;
+@keyframes spin-check {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
-
 @keyframes menu-loading {
   0% {
     margin-top: 20px;
@@ -186,12 +217,6 @@
     opacity: 1;
   }
 }
-.validate {
-  width: 0;
-  min-width: 0;
-  overflow: hidden;
-}
-
 * {
   font-family: "Roboto";
   max-width: 100%;
@@ -395,9 +420,11 @@ body {
   color: black;
 }
 @media screen and (min-width: 1000px) {
-  .heart {
-    position: relative;
-    left: 60%;
+  .heart--left {
+    left: 35%;
+  }
+  .heart--right {
+    left: 85%;
   }
 }
 .heart:hover {
@@ -414,9 +441,11 @@ body {
   color: lineargradient(#9356dc, #ff79da);
 }
 @media screen and (min-width: 1000px) {
-  .heart-transition {
-    position: relative;
-    left: 55%;
+  .heart-transition--left {
+    left: 35%;
+  }
+  .heart-transition--right {
+    left: 85%;
   }
 }
 .heart-transition:hover {
@@ -444,13 +473,6 @@ header {
   position: relative;
   margin-top: -35px;
   margin-bottom: 0;
-}
-@media screen and (min-width: 1000px) {
-  .menus__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 .menus__header {
   display: flex;
@@ -503,6 +525,7 @@ header {
   .menus__container {
     flex-direction: row;
     justify-content: space-around;
+    margin: auto;
   }
 }
 .menus__card {
@@ -512,7 +535,7 @@ header {
   background: #fff;
   border-radius: 18px;
   box-shadow: 3px 3px 3px 3px #e5e5e5;
-  padding: 3px 12px;
+  padding: 0 0 0 12px;
   margin-top: 10px;
 }
 @media screen and (max-width: 500px) {
@@ -526,28 +549,37 @@ header {
   }
 }
 .menus__card p {
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.menus__card--bold {
+.menus__card--title {
   font-weight: bold;
+  margin-top: 9px;
 }
-.menus__card--price {
+.menus__card--infos {
   display: flex;
   justify-content: space-between;
+  margin-right: 18px;
+  margin-top: 3px;
+}
+
+.plat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 @media screen and (min-width: 1000px) {
   .entries {
-    width: 30%;
+    width: 35%;
   }
 
   .plats {
-    width: 30%;
+    width: 35%;
   }
 
   .desserts {
-    width: 30%;
+    width: 35%;
     margin-bottom: 32px;
   }
 }
